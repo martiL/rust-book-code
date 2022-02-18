@@ -47,10 +47,9 @@ fn internal_adder(a: i32, b: i32) -> i32 {
     a + b
 }
 
-
 #[cfg(test)]
 mod tests {
-    use super::*; 
+    use super::*;
 
     #[test]
     fn internal() {
@@ -76,7 +75,7 @@ mod tests {
             width: 5,
             height: 1,
         };
-        
+
         assert!(larger.can_hold(&smaller));
     }
 
@@ -90,7 +89,7 @@ mod tests {
             width: 5,
             height: 1,
         };
-        
+
         assert!(!smaller.can_hold(&larger));
     }
 
@@ -103,7 +102,11 @@ mod tests {
     #[ignore]
     fn greeting_contains_name() {
         let result = greeting("Carol");
-        assert!(result.contains("Carol"), "Greeting did not contain name, value was `{}`", result);
+        assert!(
+            result.contains("Carol"),
+            "Greeting did not contain name, value was `{}`",
+            result
+        );
     }
 
     // #[test]
